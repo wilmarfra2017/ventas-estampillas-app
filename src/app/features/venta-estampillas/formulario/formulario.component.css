@@ -1,0 +1,96 @@
+/* formulario.component.css */
+.content-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Esto alinea los hijos (inputs) en el centro horizontalmente */
+  justify-content: start; /* Esto los centraría verticalmente si hay espacio adicional */
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 3rem;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%;
+  margin-right: 2rem;
+}
+
+.table-container {
+  flex-grow: 1; /* Permite que la tabla ocupe el espacio restante */
+  margin-top: 30px;
+}
+
+/* Estilos para la tabla */
+table {
+  width: 100%; /* Asegura que la tabla use todo el espacio disponible */
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.form-control {
+  width: 100%;
+  padding: 2px;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Asegurándonos de que los inputs ocupen todo el ancho del form-container */
+.form-control input, .form-control select {
+  width: calc(100% - 10px);
+  margin: auto;
+  padding: 0.30rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Estilo del botón para que sea más prominente y atractivo */
+.submit-button {
+  margin-top: 1rem;
+  width: 102%;
+  padding: 1rem;
+  border: none;
+  border-radius: 1px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Ajustes de responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .form-container {
+    margin: 2rem;
+    padding: 1rem;
+  }
+}
+
+.select-alto {
+  height: 42px;
+  width: 100% !important;
+}
+

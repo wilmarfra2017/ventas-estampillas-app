@@ -1,0 +1,77 @@
+/* ventas-estampillas.component.css */
+
+.table-container {
+  margin: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  text-align: left;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  word-wrap: break-word; /* Asegura que el contenido se ajuste dentro de la celda */
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+td {
+  vertical-align: top; /* Alinea el contenido de la celda en la parte superior */
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+  background-color: #ddd;
+}
+
+.subtable {
+  width: 100%; /* Establece el ancho de la subtabla para ocupar toda la celda */
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.subtable td {
+  padding: 4px;
+  border: none;
+  background-color: #e7e7e7;
+  font-size: 0.9em;
+}
+
+.subtable tr:hover {
+  background-color: #d0d0d0;
+}
+
+.columna-id-venta {
+  width: 10%;
+}
+
+.columna-id-cliente {
+  width: 10%;
+}
+
+.columna-fecha-venta {
+  width: 10%;
+}
+
+.columna-total-venta {
+  width: 10%;
+}
+
+.columna-detalles-venta {
+  width: 30%;
+}
+
+

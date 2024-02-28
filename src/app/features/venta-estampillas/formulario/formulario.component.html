@@ -1,0 +1,49 @@
+<div class="content-container">
+  <div class="form-container">
+      <form [formGroup]="ventaForm" (ngSubmit)="onSubmit()">
+        <div class="form-control">
+          <label for="idEstampilla">ID Estampilla</label>
+          <select formControlName="idEstampilla" id="idEstampilla" class="select-alto">
+            <option *ngFor="let estampilla of estampillas" [value]="estampilla.id">
+              {{ estampilla.id }}
+            </option>
+          </select>
+        </div>
+        <div class="form-control">
+          <label for="cantVendida">Cantidad Vendida</label>
+          <input type="number" formControlName="cantVendida" id="cantVendida" placeholder="Cantidad Vendida">
+        </div>
+        <div class="form-control">
+          <label for="precioUnitario">Precio Unitario</label>
+          <input type="number" formControlName="precioUnitario" id="precioUnitario" placeholder="Precio Unitario">
+        </div>
+        <div class="form-control">
+          <label for="idCliente">ID Cliente</label>
+          <input type="text" formControlName="idCliente" id="idCliente" placeholder="ID Cliente">
+        </div>
+        <button type="submit" class="submit-button">Crear</button>
+      </form>
+  </div>
+  <div class="table-container" *ngIf="ventas.length > 0">
+    <h2>Venta Creada:</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID Venta</th>
+          <th>Fecha Venta</th>
+          <th>Total Venta</th>
+          <th>Id Cliente</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let venta of ventas">
+          <td>{{ venta.idVenta }}</td>
+          <td>{{ venta.fechaVenta }}</td>
+          <td>{{ venta.totalVenta }}</td>
+          <td>{{ venta.idCliente }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

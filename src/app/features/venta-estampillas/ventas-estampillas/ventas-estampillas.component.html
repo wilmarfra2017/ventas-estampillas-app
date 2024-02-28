@@ -1,0 +1,41 @@
+<!-- ventas-estampillas.component.html -->
+
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th class="columna-id-venta">ID de Venta</th>
+        <th class="columna-id-cliente">ID de Cliente</th>
+        <th class="columna-fecha-venta">Fecha de Venta</th>
+        <th class="columna-total-venta">Total de Venta</th>
+        <th class="columna-detalles-venta">Detalles de Venta</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let venta of ventas">
+        <td class="columna-id-venta">{{ venta.idVenta }}</td>
+        <td class="columna-id-cliente">{{ venta.idCliente }}</td>
+        <td class="columna-fecha-venta">{{ venta.fechaVenta | date: 'dd-MM-yyyy' }}</td>
+        <td class="columna-total-venta">{{ venta.totalVenta | currency: 'COP' }}</td>
+        <td class="columna-detalles-venta">
+          <table class="subtable">
+            <tbody *ngFor="let detalle of venta.detallesVenta">
+              <tr>
+                <td>ID Estampilla:</td>
+              </tr>
+              <tr>
+                <td class="detalle-venta">{{ detalle.idEstamp }}</td>
+              </tr>
+              <tr>
+                <td>Cantidad: {{ detalle.cantidadVendida }}</td>
+              </tr>
+              <tr>
+                <td>Precio Unitario: {{ detalle.precioUnit | currency: 'COP' }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
